@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-DO</title>
+    <!-- FONT AWESOME -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <!-- JS FILE-->
+    <script defer src="public/js/app.js"></script>
+    <!-- CSS FILE-->
+    <link rel="stylesheet" href="./public/styles/main.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title">
+            <h1 id="to-do__title">TO-DO</h1>
+        </div>
+        <div class="to-do">
+            <div class="to-do__inner">
+                <input type="text" id="input" placeholder="Type your task...">
+                <button class="to-do__inner-btn" id="btn" onclick="addElement()">
+                    <i class="fas fa-plus"></i>
+                </button>
+            </div>
+
+            <ul class="list" id="list">
+            </ul>
+        </div>
+
+        <div class="footer">
+            <button class="footer__btn-clear" id="clear" type="button">Clear all</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+// COLORS
+$base-color: #fcf8e8;
+$second-color: #ecb390;
+$third-color: #222831;
+$four-color: #e84545;
+
+// FONTS
+$base-font: 'Raleway';
+$second-font: 'Montserrat';
+
+// BREAKPOINT
+
+$breakpoints: (small: 499px,
+    medium: 899px,
+    large: 999px,
+    extra-large: 1399px);
+
+@mixin breakpoint($size) {
+    $breakpoint-value: map-get($breakpoints, $size);
+
+    @media screen and (min-width: $breakpoint-value) {
+        @content;
+    }
+}

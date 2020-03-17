@@ -1,0 +1,146 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    background-color: $third-color;
+    font-family: $base-font;
+}
+
+.container {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    margin-top: 5rem;
+
+    #to-do__title {
+        font-family: $second-font;
+        letter-spacing: .2rem;
+        color: $base-color;
+        text-shadow: 1px 3px 4px $four-color;
+    }
+}
+
+.to-do {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+
+    &__inner {
+        position: relative;
+
+        #input {
+            border: 1px solid $four-color;
+            background-color: $four-color;
+            border-radius: 1rem;
+            padding: .5rem 2rem;
+            color: $base-color;
+            font-size: 1.4rem;
+        }
+
+        &-btn {
+            position: absolute;
+            right: 3%;
+            top: 4%;
+            padding: .5rem .4rem;
+            background-color: transparent;
+            border: none;
+            color: $base-color;
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.list {
+    margin-top: 2rem;
+    align-self: flex-start;
+    list-style: none;
+
+    &__item {
+        display: flex;
+        margin-bottom: 1rem;
+        color: $base-color;
+        cursor: pointer;
+    }
+
+    &__circle {
+        content: '';
+        display: inline-block;
+        align-self: center;
+        margin-right: 1rem;
+        width: 1.6rem;
+        height: 1.6rem;
+        border: 1px solid $base-color;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &__item:hover .list__circle {
+        background-color: $base-color;
+    }
+
+    &__item:hover .list__text:after {
+        width: 100%;
+        position: absolute;
+    }
+
+    &__text {
+        position: relative;
+        font-family: $second-font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.4rem;
+    }
+
+    &__text:after {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 0;
+        z-index: 1;
+        content: "";
+        background-color: $four-color;
+        width: 0;
+        height: 2px;
+        transition: width .2s linear;
+    }
+}
+
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    padding-top: 5rem;
+
+    &__btn-clear {
+        padding: .7rem 1.8rem;
+        border: 1px solid $four-color;
+        background-color: $four-color;
+        border-radius: 1rem;
+        color: $base-color;
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            background-color: $base-color;
+            color: $four-color;
+            border: 1px solid $base-color;
+        }
+    }
+}
