@@ -70,6 +70,10 @@ body {
   font-size: 1.4rem;
 }
 
+.to-do__inner #input:focus {
+  outline: 0;
+}
+
 .to-do__inner-btn {
   position: absolute;
   right: 3%;

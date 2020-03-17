@@ -55,6 +55,10 @@ body {
             width: 21rem;
             color: $four-color;
             font-size: 1.4rem;
+
+            &:focus {
+                outline: 0;
+            }
         }
 
         &-btn {
