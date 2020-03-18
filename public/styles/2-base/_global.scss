@@ -21,7 +21,7 @@ body {
     height: 400px;
     margin: 0 auto;
     background-color: $base-color;
-    box-shadow: 1px 3px 4px rgba(0, 0, 0, .4);
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.4);
 }
 
 .title {
@@ -30,7 +30,7 @@ body {
 
     #to-do__title {
         font-family: $second-font;
-        letter-spacing: .2rem;
+        letter-spacing: 0.2rem;
         color: $second-color;
         text-shadow: 1px 3px 4px $four-color;
     }
@@ -50,9 +50,9 @@ body {
             background-color: transparent;
             border: none;
             border-bottom: 1px solid $second-color;
-            padding: .5rem 0;
+            padding: 0.5rem 0.3rem;
             margin-top: 4rem;
-            width: 21rem;
+            width: 22rem;
             color: $four-color;
             font-size: 1.4rem;
 
@@ -63,9 +63,9 @@ body {
 
         &-btn {
             position: absolute;
-            right: 3%;
+            right: 0;
             top: 60%;
-            padding: .5rem .4rem;
+            padding: 0.5rem 0.4rem;
             background-color: transparent;
             border: none;
             color: $second-color;
@@ -89,7 +89,7 @@ body {
     }
 
     &__circle {
-        content: '';
+        content: "";
         display: inline-block;
         align-self: center;
         margin-right: 1rem;
@@ -100,7 +100,8 @@ body {
         cursor: pointer;
     }
 
-    &__item:hover .list__circle {
+    &__item:hover .list__circle,
+    .active {
         background-color: $second-color;
     }
 
@@ -109,7 +110,8 @@ body {
         position: absolute;
     }
 
-    &__text {
+    &__text,
+    .active {
         position: relative;
         font-family: $second-font;
         font-style: normal;
@@ -117,7 +119,8 @@ body {
         font-size: 1.4rem;
     }
 
-    &__text:after {
+    &__text:after,
+    .active {
         position: absolute;
         transform: translateY(-50%);
         top: 50%;
@@ -127,7 +130,7 @@ body {
         background-color: $second-color;
         width: 0;
         height: 2px;
-        transition: width .2s linear;
+        transition: width 0.2s linear;
     }
 }
 
@@ -139,14 +142,14 @@ body {
     margin-right: 5rem;
 
     &__btn-clear {
-        padding: .7rem 1.8rem;
+        padding: 0.7rem 1.8rem;
         border: 1px solid $second-color;
         background-color: $second-color;
         border-radius: 1rem;
         color: $base-color;
-        box-shadow: 1px 2px 5px rgba(0, 0, 0, .4);
+        box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.4);
         cursor: pointer;
-        transition: all .5s ease-in-out;
+        transition: all 0.5s ease-in-out;
 
         &:hover {
             background-color: $four-color;

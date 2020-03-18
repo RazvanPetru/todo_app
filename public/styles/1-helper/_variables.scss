@@ -1,25 +1,27 @@
 // COLORS
-$base-color: #171a21;
-$second-color: #d07921;
-$third-color: #171a21;
-$four-color: #ffffff;
+$base-color: #e6ddce;
+$second-color: #e56f5c;
+$third-color: #3d6754;
+$four-color: #59695f;
 $five-color: #52ab5d;
 
 // FONTS
-$base-font: 'Raleway';
-$second-font: 'Montserrat';
+$base-font: "Raleway";
+$second-font: "Montserrat";
 
 // BREAKPOINT
 
-$breakpoints: (small: 499px,
-    medium: 899px,
-    large: 999px,
-    extra-large: 1399px);
+$breakpoints: (
+  small: 499px,
+  medium: 899px,
+  large: 999px,
+  extra-large: 1399px
+);
 
 @mixin breakpoint($size) {
-    $breakpoint-value: map-get($breakpoints, $size);
+  $breakpoint-value: map-get($breakpoints, $size);
 
-    @media screen and (min-width: $breakpoint-value) {
-        @content;
-    }
+  @media screen and (min-width: $breakpoint-value) {
+    @content;
+  }
 }

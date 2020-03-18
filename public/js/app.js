@@ -23,11 +23,11 @@ function addElement() {
     text.innerHTML = value;
     item.append(text);
 
-    deleteElement();
+    taskDone();
     getSaved();
 };
 
-function deleteElement() {
+function taskDone() {
     const listItems = document.querySelectorAll('.list__item');
     for (let element of listItems) {
         element.addEventListener('click', () => element.remove());
@@ -52,7 +52,7 @@ function getSaved() {
 function loadTodos() {
     const data = localStorage.getItem('list');
     list.innerHTML = data;
-    deleteElement();
+    taskDone();
 };
 
 loadTodos();
